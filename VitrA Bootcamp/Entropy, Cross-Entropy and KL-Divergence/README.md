@@ -21,15 +21,15 @@ Let's give a simple example. Suppose we have a rigged dice. The probability of g
 <img src="https://latex.codecogs.com/svg.image?\log_2(1/0.20)=2.32" title="\log_2(1/0.20)=2.32" />
 
 * Considering the information transferred on a fair dice as;
-$$ \log_2(6)=2.58 $$ 
+<img src="https://latex.codecogs.com/svg.image?\log_2(6)=2.58" title="\log_2(6)=2.58" /> 
 
 It can be said that our uncertainty has not changed much.
 
 In order to calculate the information to be received for a total roll of the dice, the probability of the event occurring for each value is multiplied by the information contained in the event, and all values are added. This total transferred information is called ***entropy***.
 
 >Considering the example we gave, entropy is calculated with the formula;
->
-$$ H(p) = \sum_ip_i.log_2(1/p_i) = -\sum_ip_i.log_2(p_i) $$
+
+<img src="https://latex.codecogs.com/svg.image?H(p)&space;=&space;\sum_ip_i.log_2(1/p_i)&space;=&space;-\sum_ip_i.log_2(p_i)" title="H(p) = \sum_ip_i.log_2(1/p_i) = -\sum_ip_i.log_2(p_i)" />
 
 Entropy refers to the average amount of information in a sample taken from a given probability distribution. It explains the ***irregularity*** of the aforementioned probability distribution.
 
@@ -44,8 +44,8 @@ Entropy refers to the average amount of information in a sample taken from a giv
 In our previous example, we used 1 bit for each state, ie 6 bits in total. Messages of different lengths can be used to convey information to each situation. This ***average message length*** gives the ***cross-entropy***.
 
 > Cross-entropy is calculated similarly to entropy with the formula;
-> 
-$$ H(p, q) = -\sum_ip_i.log_2(q_i) $$
+
+<img src="https://latex.codecogs.com/svg.image?H(p,&space;q)&space;=&space;-\sum_ip_i.log_2(q_i)" title="H(p, q) = -\sum_ip_i.log_2(q_i)" />
 
 #### Cross - Entropy Loss in Machine Learning
 
@@ -53,7 +53,7 @@ Cross-entropy is often preferred as cost func in classifier training in machine 
 
 > To calculate the cross entropy loss, the following formula, which is quite similar to the cross entropy formula, is considered;
 
- $$ H(p, q) = -\sum_ip_i.log(q_i) $$
+<img src="https://latex.codecogs.com/svg.image?H(p,&space;q)&space;=&space;-\sum_ip_i.log(q_i)" title="H(p, q) = -\sum_ip_i.log(q_i)" />
 
 ---
 
@@ -63,7 +63,7 @@ Cross-entropy may cause more information to be sent during the transfer of infor
 
 > KL-Divergence is calculated with the formula;
 
-$$D_{KL}(p||q) = H(p, q) - H(p)  $$
+<img src="https://latex.codecogs.com/svg.image?D_{KL}(p||q)&space;=&space;H(p,&space;q)&space;-&space;H(p)" title="D_{KL}(p||q) = H(p, q) - H(p)" />
 
 ---
 ### Let's make an example with all that we've learned!
