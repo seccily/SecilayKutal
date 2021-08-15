@@ -18,16 +18,17 @@
 Let's give a simple example. Suppose we have a rigged dice. The probability of getting a 6 on a fair die is approximately 16.7%, while on this die let it be 20%.
 
 * In this case, the information to be transferred will be; 
->$$ \log_2(1/0.20)=2.32 $$ 
+$$ \log_2(1/0.20)=2.32 $$ 
 
 * Considering the information transferred on a fair dice as;
->$$ \log_2(6)=2.58 $$ 
+$$ \log_2(6)=2.58 $$ 
 
 It can be said that our uncertainty has not changed much.
 
 In order to calculate the information to be received for a total roll of the dice, the probability of the event occurring for each value is multiplied by the information contained in the event, and all values are added. This total transferred information is called ***entropy***.
 
 >Considering the example we gave, entropy is calculated with the formula;
+>
 $$ H(p) = \sum_ip_i.log_2(1/p_i) = -\sum_ip_i.log_2(p_i) $$
 
 Entropy refers to the average amount of information in a sample taken from a given probability distribution. It explains the ***irregularity*** of the aforementioned probability distribution.
@@ -43,6 +44,7 @@ Entropy refers to the average amount of information in a sample taken from a giv
 In our previous example, we used 1 bit for each state, ie 6 bits in total. Messages of different lengths can be used to convey information to each situation. This ***average message length*** gives the ***cross-entropy***.
 
 > Cross-entropy is calculated similarly to entropy with the formula;
+> 
 $$ H(p, q) = -\sum_ip_i.log_2(q_i) $$
 
 #### Cross - Entropy Loss in Machine Learning
@@ -50,7 +52,8 @@ $$ H(p, q) = -\sum_ip_i.log_2(q_i) $$
 Cross-entropy is often preferred as cost func in classifier training in machine learning.
 
 > To calculate the cross entropy loss, the following formula, which is quite similar to the cross entropy formula, is considered;
-> $$ H(p, q) = -\sum_ip_i.log(q_i) $$
+
+ $$ H(p, q) = -\sum_ip_i.log(q_i) $$
 
 ---
 
@@ -59,6 +62,7 @@ Cross-entropy is often preferred as cost func in classifier training in machine 
 Cross-entropy may cause more information to be sent during the transfer of information. For example, in an example where we express each state with a bit, our entropy of 2.86 means that our useful information is *2.86* bits. However, if we express our situations with messages of various lengths and therefore our cross entropy is *5.1*, it means that we are sending more information to the receiver than it needs. This ***difference between cross-entropy and entropy*** is called ***KL-Divergence***.
 
 > KL-Divergence is calculated with the formula;
+
 $$D_{KL}(p||q) = H(p, q) - H(p)  $$
 
 ---
