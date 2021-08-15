@@ -18,7 +18,9 @@
 Let's give a simple example. Suppose we have a rigged dice. The probability of getting a 6 on a fair die is approximately 16.7%, while on this die let it be 20%.
 
 * In this case, the information to be transferred will be; 
-$$ \log_2(1/0.20)=2.32 $$ 
+```math
+\log_2(1/0.20)=2.32
+```
 
 * Considering the information transferred on a fair dice as;
 $$ \log_2(6)=2.58 $$ 
